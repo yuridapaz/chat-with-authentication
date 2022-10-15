@@ -23,6 +23,7 @@ const MessageContainer = styled.div`
       .message-photo {
         border-radius: 50%;
         width: 40px;
+        height: 40px;
       }
 
       .message-text {
@@ -81,13 +82,6 @@ function Message({ message }) {
     message.uid === auth.currentUser?.uid ? `sent` : `received`;
 
   return (
-    // <MessageContainer>
-    //   <div className={`message-div ${messageClass}`}>
-    //     <p className="message-name">{message.name}</p>
-    //     <p className={`message-text ${messageClass}`}> {message.text} </p>
-    //     <img src={message.photo} alt="" />
-    //   </div>
-    // </MessageContainer>
     <MessageContainer>
       <div className={`message-div ${messageClass}`}>
         <p className="message-name">{message.name}</p>

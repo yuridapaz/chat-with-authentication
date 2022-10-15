@@ -18,6 +18,7 @@ const ChatForm = styled.form`
     color: white;
     background-color: #4a647a;
     outline: none;
+    border: none;
     ::placeholder {
       color: white;
     }
@@ -36,6 +37,22 @@ const ChatForm = styled.form`
     justify-content: center;
     cursor: pointer;
     color: white;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 900px;
+    position: relative;
+
+    .form-input {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    .form-button {
+      position: absolute;
+
+      border-bottom-right-radius: 10px;
+    }
   }
 `;
 
@@ -59,6 +76,7 @@ const SendMessage = ({ scroll }) => {
     });
     setInputValue("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
+    console.log(photoURL);
   };
 
   return (
