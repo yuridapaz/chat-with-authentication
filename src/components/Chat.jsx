@@ -13,10 +13,15 @@ export const ChatBox = styled.div`
   overflow: auto;
   padding: 100px 12px;
   background-color: #eaeff3;
-  /* border-left: 3px solid #374b5c; */
-  /* border-right: 3px solid #374b5c; */
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  @media (min-width: 992px) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding-bottom: 50px;
+  }
 `;
 
 const Chat = () => {
